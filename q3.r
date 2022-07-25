@@ -1,0 +1,6 @@
+library(BSDA)
+library(readxl)
+BeefConsumption <- read_excel("Desktop/DubaiBeefConsumption.xls")
+BeefConsumption <- as.numeric(unlist(BeefConsumption))
+standard_deviation <- sd(BeefConsumption)
+z.test(BeefConsumption, sigma.x <- standard_deviation, mu = 57.5)
